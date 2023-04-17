@@ -5,8 +5,8 @@
     <style>
       /* Style the calculator container */
       #calculator-container {
-        width: 250px;
-        height: 350px;
+        width: 300px;
+        height: 600px;
         border: 5px solid rgb(161, 55, 55);
         border-radius: 10px;
         margin: 50px auto;
@@ -18,9 +18,9 @@
 
       /* Style the calculator buttons */
       .button {
-        font-size: 24px;
-        padding: 10px;
-        background-color: red;
+        font-size: 30px;
+        padding: 20px;
+        background-color: whitesmoke;
         border: 2px solid black;
         border-radius: 5px;
         cursor: pointer;
@@ -32,9 +32,9 @@
 
       /* Style the calculator display */
       #calculator-display {
-        font-size: 36px;
+        font-size: 70px;
         text-align: right;
-        padding: 10px;
+        padding: 30px;
         background-color: lightgray;
         border: 2px solid black;
         border-radius: 5px;
@@ -44,7 +44,7 @@
   </head>
   <body>
     <div id="calculator-container">
-      <div id="calculator-display"></div>
+      <input type="text" id="calculator-display">
       <div class="button" onclick="addToDisplay('7')">7</div>
       <div class="button" onclick="addToDisplay('8')">8</div>
       <div class="button" onclick="addToDisplay('9')">9</div>
@@ -69,12 +69,12 @@
 
       function addToDisplay(value) {
         display += value;
-        document.getElementById("calculator-display").innerHTML = display;
+        document.getElementById("calculator-display").value = display;
       }
 
       function clearDisplay() {
         display = "";
-        document.getElementById("calculator-display").innerHTML = display;
+        document.getElementById("calculator-display").value = display;
       }
 
       function calculate() {
